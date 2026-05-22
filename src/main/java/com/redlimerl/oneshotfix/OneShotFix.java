@@ -10,7 +10,7 @@ import java.util.Optional;
 
 public class OneShotFix {
     public static boolean shouldCheckVelocityInUnloadedChunk(ServerWorld world, Vec3d vec3d) {
-        return world.getEnderDragonFight() != null && !world.getAliveEnderDragons().isEmpty() && new Vec3d(vec3d.getX(), 0, vec3d.getZ()).length() > 16;
+        return !world.getAliveEnderDragons().isEmpty() && new Vec3d(vec3d.getX(), 0, vec3d.getZ()).length() > 16;
     }
 
     public static Vec3d maximumLoadedPosVelocity(ServerWorld world, Vec3d pos, Vec3d velocity) {
